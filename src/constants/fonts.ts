@@ -4,4 +4,7 @@ export const fonts = {
   main: {
     fontSize: normalize(16),
   },
+  title: {
+    fontSize: normalize(20),
+  },
 };

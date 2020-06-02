@@ -3,6 +3,8 @@ export const translation = {
   sign_up: 'Sign up',
   register: 'Register',
   login: 'Login',
+  send: 'Send',
+  reset: 'Reset',
   "don't_have_account": "Don't have account?",
   have_you_got_an_account: 'Have you got account?',
   email: 'Email',
@@ -11,4 +13,12 @@ export const translation = {
   required_field: 'Required field',
   short_password: 'Short password',
   forgot_password: 'Forgot password',
+  forgot_title: 'Forgot your password?',
+  forgot_info:
+    "Enter your e-mail address and we'll send you instructions to reset password",
+  reset_title: 'Reset your password?',
+  reset_info: 'Enter your new password',
+  new_password: 'New password',
+  confirm_password: 'Confirm password',
+  password_match_error: 'Passwords do not match',
 };

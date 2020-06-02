@@ -1,7 +1,15 @@
 import {
   SignInValidationSchema,
   SignUpValidationSchema,
+  ForgotPasswordValidationSchema,
+  ResetPasswordValidationSchema,
 } from '@src/utils/validation';
 import { normalize } from './normalize';
 
-export { SignInValidationSchema, SignUpValidationSchema, normalize };
+export {
+  SignInValidationSchema,
+  SignUpValidationSchema,
+  normalize,
+  ForgotPasswordValidationSchema,
+  ResetPasswordValidationSchema,
+};
