@@ -3,6 +3,7 @@ import {
   SignUpValidationSchema,
   ForgotPasswordValidationSchema,
   ResetPasswordValidationSchema,
+  NewProjectValidationSchema,
 } from '@src/utils/validation';
 import { normalize } from './normalize';
 
@@ -12,4 +13,5 @@ export {
   normalize,
   ForgotPasswordValidationSchema,
   ResetPasswordValidationSchema,
+  NewProjectValidationSchema,
 };

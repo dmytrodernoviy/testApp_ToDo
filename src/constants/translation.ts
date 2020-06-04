@@ -21,4 +21,9 @@ export const translation = {
   new_password: 'New password',
   confirm_password: 'Confirm password',
   password_match_error: 'Passwords do not match',
+  projects: 'Projects',
+  my_tasks: 'My tasks',
+  title: 'Title',
+  description: 'Description',
+  tasks: 'Tasks',
 };

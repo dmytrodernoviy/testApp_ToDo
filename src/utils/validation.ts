@@ -34,3 +34,8 @@ export const ResetPasswordValidationSchema = Yup.object().shape({
     .required(translation.required_field)
     .oneOf([Yup.ref('new_password')], translation.password_match_error),
 });
+
+export const NewProjectValidationSchema = Yup.object().shape({
+  title: Yup.string().required(translation.required_field),
+  description: Yup.string().required(translation.required_field),
+});

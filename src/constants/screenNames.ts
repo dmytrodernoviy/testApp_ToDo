@@ -3,8 +3,10 @@ export const screenNames = {
   SignIn: 'SignIn',
   ResetPassword: 'ReserPassword',
   ForgotPassword: 'ForgotPassword',
-  List: 'List',
-  My_Projects: 'My_Projects',
+  MyTasks: 'MyTasks',
+  Projects: 'Projects',
+  EditProject: 'EditProject',
   AuthStack: 'AuthStack',
   MainStack: 'MainStack',
+  ProjectsStack: 'ProjectsStack',
 };
