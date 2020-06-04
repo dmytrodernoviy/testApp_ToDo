@@ -13,8 +13,11 @@ import { normalize } from '@src/utils';
 import { translation, screenNames } from '@src/constants';
 import { NavigationService } from '@src/services';
 import SignUpForm from './SignUpForm';
+import { useSelector } from 'react-redux';
+import { AuthSelectors } from '@src/redux/auth/selectors';
 
 const SignUpScreen: React.FC = () => {
+  const isLoading = useSelector(AuthSelectors.isSignUpLoading);
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
       <View style={styles.container}>
@@ -22,7 +25,7 @@ const SignUpScreen: React.FC = () => {
           style={styles.keyboardAvoid}
           keyboardVerticalOffset={-normalize(130, 'height')}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <SignUpForm />
+          <SignUpForm isLoading={isLoading} />
         </KeyboardAvoidingView>
         <View>
           <View style={styles.register}>

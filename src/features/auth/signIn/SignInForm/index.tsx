@@ -5,15 +5,19 @@ import { Formik } from 'formik';
 import { SignInValidationSchema } from '@src/utils';
 import { translation, screenNames } from '@src/constants';
 import styles from './styles';
-import { NavigationService } from '@src/services';
+import { NavigationService, DispatcherService } from '@src/services';
 
-const SignInForm: React.FC = () => {
+interface Props {
+  isLoading: boolean;
+}
+
+const SignInForm: React.FC<Props> = ({ isLoading }) => {
   return (
     <Formik
       initialValues={{ email: '', password: '' }}
       validationSchema={SignInValidationSchema}
       onSubmit={(values) => {
-        console.log(values);
+        DispatcherService.signIn({ payload: values });
       }}>
       {({
         handleChange,
@@ -54,7 +58,7 @@ const SignInForm: React.FC = () => {
               {touched.password && errors.password}
             </HelperText>
           </View>
-          <Button mode="contained" onPress={handleSubmit}>
+          <Button mode="contained" onPress={handleSubmit} loading={isLoading}>
             {translation.sign_in}
           </Button>
           <TouchableOpacity

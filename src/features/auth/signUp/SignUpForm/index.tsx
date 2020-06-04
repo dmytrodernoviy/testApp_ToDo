@@ -5,14 +5,19 @@ import { Formik } from 'formik';
 import { SignUpValidationSchema } from '@src/utils';
 import { translation } from '@src/constants';
 import styles from './styles';
+import { DispatcherService } from '@src/services';
 
-const SignUpForm: React.FC = () => {
+interface Props {
+  isLoading: boolean;
+}
+
+const SignUpForm: React.FC<Props> = ({ isLoading }) => {
   return (
     <Formik
       initialValues={{ email: '', password: '' }}
       validationSchema={SignUpValidationSchema}
       onSubmit={(values) => {
-        console.log(values);
+        DispatcherService.signUp({ payload: values });
       }}>
       {({
         handleChange,
@@ -53,7 +58,7 @@ const SignUpForm: React.FC = () => {
               {touched.password && errors.password}
             </HelperText>
           </View>
-          <Button mode="contained" onPress={handleSubmit}>
+          <Button mode="contained" onPress={handleSubmit} loading={isLoading}>
             {translation.sign_up}
           </Button>
         </View>
